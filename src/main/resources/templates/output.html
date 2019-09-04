@@ -5,11 +5,12 @@
 <title>結果画面</title>
 </head>
 <body>
-	<h1>NoDIパターン</h1>
+	<h1>YesDIパターン</h1>
 <p>社員No:<span th:text="${number}">100</span>
 <!-- thのタグが仕掛け。tymeleafがプログラムが反映していない時に表示される。
 なので、静的画面(Webデザイナーと)、プログラム画面(プログラマー)とはソースは同じでも別の表示が出来る -->
 <p>社員名:<span th:text="${name}">ダミー松尾明人</span>
+<br>
 <a href="index.html" th:href="@{index}">入力画面へ</a>
 </body>
 </html>

@@ -7,7 +7,7 @@ public class ShainForm {
 	//空じゃないかチェック
 	@NotEmpty(message = "社員ナンバーを入れてくださいね")
 	@Pattern(regexp = "\\d{3}", message = "半角数字、3桁でよろ")
-	//index.htmlのnumberを宣言
+	//index.htmlのnumberを定義
 	private String number;
 
 	//getter,setterは必須

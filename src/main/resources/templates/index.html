@@ -1,16 +1,17 @@
 <!-- 動的htmlの場合はtemplates配下になる。今回はtymeleafを使うので動的-->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>入力画面</title>
 </head>
 <body>
-	<h1>NoDIパターン</h1>
+	<h1>YesDIパターン</h1>
 	<!-- thはhtmlタグではなくtymeleafタグのため、デザインに影響がないのがミソ -->
 	<!-- @output　送信を押した時にControllerに飛ぶ -->
 	<!-- shainFormオブジェクトを呼び出す -->
-	<form method="POST" action="output.html" th:action="@{output}" th:object="@{shainForm}">
+	<!-- th:objectはなくてもいいが、わかりやすく定義してるだけ -->
+	<form method="POST" action="output.html" th:action="@{output}" th:object="${shainForm}">
 		<p>社員Noを入力してください(3桁以上)</p>
 		<!-- numberの部分はShainFormでチェックする -->
 		<!-- shainFormの何を渡すかを宣言。ここではnumberを入れている -->
